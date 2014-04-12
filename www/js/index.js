@@ -38,7 +38,7 @@ var app = {
         // external url
         var ref = window.open(encodeURI('http://apache.org'), '_blank', 'location=yes');
         // relative document
-        ref = window.open('next.html', '_self');
+        // ref = window.open('next.html', '_self');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
