@@ -38,7 +38,8 @@ var app = {
                 alert('with styles');
                 var iab = window.open($(this).attr('href'), '_blank');
                 iab.addEventListener('loadstop', function() {
-                    iab.insertCSS( { file: "chat.window.css" } );
+                    iab.insertCSS( { file: "css/chat.window.css" } );
+                    iab.insertCSS( { code: "body { background-color: green !important; }" } );
                 });
             } else {
                 alert('without styles');
