@@ -41,12 +41,12 @@ var app = {
 
                 iab.addEventListener('loadstop', function() {
                     // Once loaded, add css
-                    iab.insertCSS( { file: "../css/chat.window.css" }, function() {
+                    iab.insertCSS( { code: "body { background-color: green !important; }" } );
+                    iab.insertCSS( { file: "chat.window.css" }, function() {
                         // And then JS
-                        iab.executeScript( { file: "chat.window.js"} );
+                        // iab.executeScript( { file: "chat.window.js"} );
                         
                     });
-                    // iab.insertCSS( { code: "body { background-color: green !important; }" } );
                 });
             } else {
                 alert('without styles');
