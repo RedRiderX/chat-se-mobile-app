@@ -29,6 +29,11 @@
     -->
     <preference name="permissions"                value="none"/>
 
+    <!-- 
+        Only bother trying to make it work on Android for now
+     -->
+    <gap:platform name="android" />
+
     <!-- Customize your app and platform with the preference element. -->
     <!-- <preference name="phonegap-version"      value="3.4.0" /> -->      <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
