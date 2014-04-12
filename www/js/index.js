@@ -36,10 +36,17 @@ var app = {
 
             if ( $(this).attr('id') == 'launchSite' ) {
                 alert('with styles');
+
                 var iab = window.open($(this).attr('href'), '_blank');
+
                 iab.addEventListener('loadstop', function() {
-                    iab.insertCSS( { file: "css/chat.window.css" } );
-                    iab.insertCSS( { code: "body { background-color: green !important; }" } );
+                    // Once loaded, add css
+                    iab.insertCSS( { file: "css/chat.window.css" } function() {
+                        // And then JS
+                        iab.executeScript( { file: "js/chat.window.js"} );
+                        
+                    });
+                    // iab.insertCSS( { code: "body { background-color: green !important; }" } );
                 });
             } else {
                 alert('without styles');
