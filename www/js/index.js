@@ -29,7 +29,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        $('#launchSite').addEventListener('onclick', this.launchSite(), false);
+        $('#launchSite').addEventListener('click', this.launchSite());
     },
 
     // deviceready Event Handler
