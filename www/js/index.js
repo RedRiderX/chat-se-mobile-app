@@ -31,7 +31,7 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         $(document).on('click', 'a[target=_blank]', function (event) {
             event.preventDefault();
-
+            alert($(this).attr('id'));
             if ( $(this).attr('id') == 'lauchSite' ) {
                 alert('with styles');
                 var iab = window.open($(this).attr('href'), '_blank');
