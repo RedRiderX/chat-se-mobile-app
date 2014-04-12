@@ -17,17 +17,21 @@
  * under the License.
  */
 var app = {
+
     // Application Constructor
     initialize: function() {
         this.bindEvents();
     },
+
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        $('#launchSite').addEventListener('onclick', this.launchSite(this.chatWindow), false);
     },
+
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
@@ -35,11 +39,16 @@ var app = {
     onDeviceReady: function() {
         alert("Hello, world");
         app.receivedEvent('deviceready');
-        // external url
-        var ref = window.open(encodeURI('http://apache.org'), '_self', 'location=yes');
-        // relative document
-        // ref = window.open('next.html', '_self');
     },
+
+    launchSite: function() {
+        var ref = window.open('http://google.com', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+    },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
