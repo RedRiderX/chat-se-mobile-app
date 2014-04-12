@@ -29,7 +29,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        $('#launchSite').addEventListener('onclick', this.launchSite(this.chatWindow), false);
+        $('#launchSite').addEventListener('onclick', this.launchSite(), false);
     },
 
     // deviceready Event Handler
@@ -37,19 +37,19 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        alert("Hello, world");
+        // alert("Hello, world");
         app.receivedEvent('deviceready');
     },
 
     launchSite: function() {
-        var ref = window.open('http://chat.stackexchange.com', '_self', 'location=no');
+        var ref = window.open('http://chat.stackexchange.com/rooms/35/the-bridge', '_self', 'location=no');
          ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
          ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
          ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
          ref.addEventListener('exit', function(event) { alert(event.type); });
-        setTimeout(function() {
-            ref.close();
-        }, 5000);
+        // setTimeout(function() {
+        //     ref.close();
+        // }, 5000);
     },
 
     // Update DOM on a Received Event
