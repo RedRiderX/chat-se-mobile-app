@@ -41,7 +41,7 @@ var app = {
 
                 iab.addEventListener('loadstop', function() {
                     // Once loaded, add css
-                    iab.insertCSS( { file: "css/chat.window.css" } function() {
+                    iab.insertCSS( { file: "css/chat.window.css" }, function() {
                         // And then JS
                         iab.executeScript( { file: "js/chat.window.js"} );
                         
