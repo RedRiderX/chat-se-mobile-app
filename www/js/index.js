@@ -31,7 +31,15 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         $(document).on('click', 'a[target=_blank]', function (event) {
             event.preventDefault();
-            window.open($(this).attr('href'), '_blank');
+
+            if ( $(this).attr('id') == 'lauchSite' ) {
+                var ref = window.open($(this).attr('href'), '_blank');
+                ref.addEventListener('loadstop', function() {
+                    ref.insertCSS( { file: "mystyles.css" } );
+                });
+            } else {
+                window.open($(this).attr('href'), '_blank');
+            }
         });
     },
 
