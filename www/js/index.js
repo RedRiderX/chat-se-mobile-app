@@ -36,7 +36,7 @@ var app = {
         alert("Hello, world");
         app.receivedEvent('deviceready');
         // external url
-        var ref = window.open(encodeURI('http://apache.org'), '_blank', 'location=yes');
+        var ref = window.open(encodeURI('http://apache.org'), '_self', 'location=yes');
         // relative document
         // ref = window.open('next.html', '_self');
     },
