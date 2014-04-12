@@ -35,6 +35,10 @@ var app = {
     onDeviceReady: function() {
         alert("Hello, world");
         app.receivedEvent('deviceready');
+        // external url
+        var ref = window.open(encodeURI('http://apache.org'), '_blank', 'location=yes');
+        // relative document
+        ref = window.open('next.html', '_self');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
