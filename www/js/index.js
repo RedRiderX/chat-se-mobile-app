@@ -47,6 +47,9 @@ var app = {
          ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
          ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
          ref.addEventListener('exit', function(event) { alert(event.type); });
+        setTimeout(function() {
+            ref.close();
+        }, 5000);
     },
 
     // Update DOM on a Received Event
