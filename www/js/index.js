@@ -33,11 +33,13 @@ var app = {
             event.preventDefault();
 
             if ( $(this).attr('id') == 'lauchSite' ) {
-                var ref = window.open($(this).attr('href'), '_blank');
-                ref.addEventListener('loadstop', function() {
-                    ref.insertCSS( { file: "mystyles.css" } );
+                alert('with styles');
+                var iab = window.open($(this).attr('href'), '_blank');
+                iab.addEventListener('loadstop', function() {
+                    iab.insertCSS( { file: "chat.window.css" } );
                 });
             } else {
+                alert('without styles');
                 window.open($(this).attr('href'), '_blank');
             }
         });
