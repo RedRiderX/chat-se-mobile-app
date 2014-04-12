@@ -9,7 +9,7 @@
     <name>Chat.SE (unofficial)</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        A PhoneGap based mobile wrapper for se chat + some helpful additions
     </description>
 
     <author href="https://github.com/RedRiderX/chat-se-mobile-app" email="contactus@redriderx.com">
