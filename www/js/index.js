@@ -31,8 +31,10 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         $(document).on('click', 'a[target=_blank]', function (event) {
             event.preventDefault();
+
             alert($(this).attr('id'));
-            if ( $(this).attr('id') == 'lauchSite' ) {
+
+            if ( $(this).attr('id') == 'launchSite' ) {
                 alert('with styles');
                 var iab = window.open($(this).attr('href'), '_blank');
                 iab.addEventListener('loadstop', function() {
