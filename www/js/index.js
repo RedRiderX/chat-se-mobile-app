@@ -51,12 +51,12 @@ var app = {
                         iab.insertCSS( { code: cssData }, function() {
 
                             // And then JS
-                            // $.get('js/chat.window.js', function(jsData) {
+                            $.get('js/chat.window.js', function(jsData) {
 
-                            //     iab.executeScript( { code: jsData }, function() {
+                                iab.executeScript( { code: jsData }, function() {
                                     alert("CSS and JS loaded");
-                            //     });
-                            // });
+                                });
+                            });
                         });
 
                     });
