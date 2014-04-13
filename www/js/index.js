@@ -33,7 +33,7 @@ var app = {
         $(document).on('click', 'a[target=_blank]', function (event) {
             event.preventDefault();
 
-            // alert($(this).attr('id'));
+            alert($(this).attr('id'));
 
             if ( $(this).attr('id') == 'launchSite' ) {
                 alert('with styles');
@@ -42,19 +42,19 @@ var app = {
 
                 iab.addEventListener('loadstop', function() {
 
-                    // Once loaded, add css
-                    $.get('css/chat.window.css', function(data) {
+                    // workaround to get code using jQuery.get
+                    $.get('css/chat.window.css', function(cssData) {
 
-                        // workaround to get code using jQuery.get
-                        iab.insertCSS( { file: data }, function() {
+                        // Once loaded, add css
+                        iab.insertCSS( { file: cssData }, function() {
 
                             // And then JS
-                            $.get('css/chat.window.css', function(data) {
+                            // $.get('js/chat.window.js', function(jsData) {
 
-                                iab.executeScript( { file: data } function() {
+                            //     iab.executeScript( { file: jsData }, function() {
                                     alert("CSS and JS loaded");
-                                });
-                            });
+                            //     });
+                            // });
                         });
 
                     });
