@@ -43,21 +43,9 @@
         width: 100%;
 
         & > li {
-            // float: left;
             background: rgba(#333, 0.15);
-            // cursor: pointer;
-            // text-align: left;
             margin-bottom: $spacing-small !important;
             padding: $spacing-small !important;
-            
-            // &:hover,
-            // &:hover > a {
-            //     color: #fff;
-            // }
-            
-            // &:hover {
-            //     box-shadow: inset 0 0 0 0.15em rgba(122, 122, 126, 0.9);
-            // }
         }
     }
 
@@ -99,7 +87,7 @@
     }
 }
 
-.room-title {
+#room-title {
     text-align: right;
     line-height: 1.5rem;
     font-size: 1.25rem;

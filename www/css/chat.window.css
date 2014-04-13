@@ -5,16 +5,11 @@ body {
 }
 
 #main {
-  width: 100%;
-}
-@media (orientation: portrait) {
-  #main {
-    width: 95% !important;
-  }
+  width: 95% !important;
 }
 @media (orientation: landscape) {
   #main {
-    width: 67%;
+    width: 67% !important;
   }
 }
 
@@ -86,7 +81,7 @@ body {
   }
 }
 
-.room-title {
+#room-title {
   text-align: right;
   line-height: 1.5rem;
   font-size: 1.25rem;
@@ -140,13 +135,32 @@ body {
   #reply-count,
   #flag-count,
   #modflag-count {
-    top: -1rem;
+    top: -1rem !important;
   }
 }
 
+@media (orientation: landscape) {
+  #input-area #input-area {
+    width: 30% !important;
+    right: 0 !important;
+    left: auto !important;
+    height: 8em !important;
+  }
+}
 @media (orientation: portrait) {
+  #input-area {
+    height: 2.5rem !important;
+  }
+  #input-area td:first-child {
+    display: block;
+    width: 0;
+  }
   #input-area .chat-input {
-    width: 65% !important;
+    width: 64% !important;
+    padding: 0.5rem 0 !important;
+  }
+  #input-area #chat-buttons {
+    padding: 0.25rem !important;
   }
 }
 
@@ -164,13 +178,6 @@ body {
 }
 
 @media (orientation: landscape) {
-  #input-area {
-    width: 30% !important;
-    right: 0 !important;
-    left: auto !important;
-    height: 8em !important;
-  }
-
   #chat {
     padding-bottom: 0 !important;
   }

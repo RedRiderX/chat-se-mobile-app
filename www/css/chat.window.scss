@@ -18,16 +18,11 @@ body {
 
 #main {
 
-    width: 100%;
-
-    @media (orientation: portrait) {
-
-        width: 95% !important;
-    }
+    width: 95% !important;
 
     @media (orientation: landscape) {
         
-        width: 67%;
+        width: 67% !important;
     }
 }
 
@@ -73,15 +68,38 @@ body {
     left: 0 !important;
 
     @media (orientation: portrait) {
-        top: -$spacing-medium;
+        top: -$spacing-medium !important;
     }
 }
 
 #input-area {
+
+    @media (orientation: landscape) {
+
+        #input-area {
+            width: 30% !important;
+            right: 0 !important; 
+            left: auto !important;
+            height: 8em !important;
+        }
+    }
     
     @media (orientation: portrait) {
+
+        height: 2.5rem !important;
+
+        td:first-child {
+            display: block;
+            width: 0;
+        }
+
         .chat-input {
-            width: 65% !important;
+            width: 64% !important;
+            padding: $spacing-small 0 !important;
+        }
+
+        #chat-buttons {
+            padding: ( $spacing-small / 2) !important;
         }
     }
 }
@@ -99,13 +117,6 @@ body {
 }
 
 @media (orientation: landscape) {
-
-    #input-area {
-        width: 30% !important;
-        right: 0 !important; 
-        left: auto !important;
-        height: 8em !important;
-    }
 
     #chat {
         padding-bottom: 0 !important;

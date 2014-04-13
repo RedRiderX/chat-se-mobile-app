@@ -5,7 +5,7 @@ $(function() {
 	$('head').prepend(viewportTag);
 
 	// Move chatroom title
-	$( '#sidebar-content' ).prepend( $( '#sidebar-content .room-title' ) );
+	$( '#sidebar-content' ).prepend( $( '#room-title' ) );
 
 	console.log('js injected!');
 
