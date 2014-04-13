@@ -48,12 +48,12 @@ var app = {
                         alert(cssData);
 
                         // Once loaded, add css
-                        iab.insertCSS( { file: cssData }, function() {
+                        iab.insertCSS( { code: cssData }, function() {
 
                             // And then JS
                             // $.get('js/chat.window.js', function(jsData) {
 
-                            //     iab.executeScript( { file: jsData }, function() {
+                            //     iab.executeScript( { code: jsData }, function() {
                                     alert("CSS and JS loaded");
                             //     });
                             // });
