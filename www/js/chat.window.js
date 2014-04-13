@@ -18,7 +18,7 @@ $(function() {
     	var urlIsRelative = false;
 
     	if ( $(this).is("[href^='/']") ) {
-    		
+
 			urlIsRelative = true;    		
     	}
 
@@ -30,7 +30,7 @@ $(function() {
 		if ( shouldOpenExternal ) {
 
 			event.preventDefault();
-			window.open(url, '_system')
+			window.open(url, '_system');
 		}
 	});
 });

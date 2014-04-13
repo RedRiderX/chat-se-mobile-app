@@ -49,6 +49,7 @@ div[data-role="content"] {
   /* 170px x 200px */
   position: absolute;
   /* position in the center of the screen */
+  overflow: visible;
   left: 50%;
   top: 50%;
   height: 50px;
