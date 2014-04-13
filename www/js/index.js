@@ -21,6 +21,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        // window.basePath = window.location.href.replace('index.html', '');
     },
 
     // Bind Event Listeners
@@ -32,7 +33,7 @@ var app = {
         $(document).on('click', 'a[target=_blank]', function (event) {
             event.preventDefault();
 
-            alert($(this).attr('id'));
+            // alert($(this).attr('id'));
 
             if ( $(this).attr('id') == 'launchSite' ) {
                 alert('with styles');
@@ -40,10 +41,34 @@ var app = {
                 var iab = window.open($(this).attr('href'), '_blank');
 
                 iab.addEventListener('loadstop', function() {
+
                     // Once loaded, add css
-                    // iab.insertCSS( { file: "../css/chat.window.css" } );
-                    iab.insertCSS( { file: "chat.window.css" } );
+                    $.get('css/chat.window.css', function(data) {
+
+                        // workaround to get code using jQuery.get
+                        iab.insertCSS( { file: data }, function() {
+
+                            // And then JS
+                            $.get('css/chat.window.css', function(data) {
+
+                                iab.executeScript( { file: data } function() {
+                                    alert("CSS and JS loaded");
+                                });
+                            });
+                        });
+
+                    });
                 });
+
+                // iab.addEventListener('loadstop', function() {
+                //     // Once loaded, add css
+                //     // iab.insertCSS( { file: "../css/chat.window.css" } );
+                //     iab.insertCSS( { file: basePath + "css/chat.window.css" }, function() {
+                //         // And then JS
+                //         iab.executeScript( { file: basePath + "js/" } );
+
+                //     });
+                // });
             } else {
                 alert('without styles');
                 window.open($(this).attr('href'), '_blank');
