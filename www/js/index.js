@@ -33,10 +33,7 @@ var app = {
         $(document).on('click', 'a[target=_blank]', function (event) {
             event.preventDefault();
 
-            alert($(this).attr('id'));
-
             if ( $(this).attr('id') == 'launchSite' ) {
-                alert('with styles');
 
                 var iab = window.open($(this).attr('href'), '_blank');
 
@@ -45,8 +42,6 @@ var app = {
                     // workaround to get code using jQuery.get
                     $.get('css/chat.window.css', function(cssData) {
 
-                        alert(cssData);
-
                         // Once loaded, add css
                         iab.insertCSS( { code: cssData }, function() {
 
@@ -54,7 +49,7 @@ var app = {
                             $.get('js/chat.window.js', function(jsData) {
 
                                 iab.executeScript( { code: jsData }, function() {
-                                    alert("CSS and JS loaded");
+                                    console.log("CSS and JS loaded");
                                 });
                             });
                         });
@@ -62,15 +57,6 @@ var app = {
                     });
                 });
 
-                // iab.addEventListener('loadstop', function() {
-                //     // Once loaded, add css
-                //     // iab.insertCSS( { file: "../css/chat.window.css" } );
-                //     iab.insertCSS( { file: basePath + "css/chat.window.css" }, function() {
-                //         // And then JS
-                //         iab.executeScript( { file: basePath + "js/" } );
-
-                //     });
-                // });
             } else {
                 alert('without styles');
                 window.open($(this).attr('href'), '_blank');
