@@ -1,0 +1,113 @@
+// Sidebar Styles
+// 
+
+#sidebar {
+    // overflow: auto !important;
+
+    font-size: 1em;
+    height: 100%;
+    width: 28%;
+    padding: $spacing-medium !important;
+    
+    overflow: scroll !important;
+
+    position: fixed;
+    background: rgba($clr-sidebar, 0.9) !important; 
+    color: $clr-text;
+
+    transition: all 0.3s;
+
+    a {
+        text-decoration: underline;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        padding: .5em 0;
+        text-align: center;
+        
+        color: $clr-text-button;
+        text-decoration: none;
+    }
+    
+    /* room tags */
+    .tag {
+        font-size: .9em;
+        display: inline;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+
+        & > li {
+            // float: left;
+            background: rgba(#333, 0.15);
+            // cursor: pointer;
+            // text-align: left;
+            margin-bottom: $spacing-small !important;
+            padding: $spacing-small !important;
+            
+            // &:hover,
+            // &:hover > a {
+            //     color: #fff;
+            // }
+            
+            // &:hover {
+            //     box-shadow: inset 0 0 0 0.15em rgba(122, 122, 126, 0.9);
+            // }
+        }
+    }
+
+    .fr.msg-small {
+        text-transform: uppercase;
+        font-size: 1em;
+
+        a {
+            font-size: 1em;
+        }
+    }
+
+    #info {
+        padding: 0;
+    }
+
+    /* users widget */
+    #present-users .user-container {
+        width: 17% !important;
+        padding: 4%;
+    }
+
+    .avatar img {
+        width: 100% !important;
+        height: auto;
+    }
+
+
+    @media (orientation: portrait) {
+ 
+        position: fixed !important;
+        top: 0 !important;
+        right: -35% !important;
+        width: 40% !important;
+
+        &:hover {
+            right: 0 !important;
+        }
+    }
+}
+
+.room-title {
+    text-align: right;
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.sidebar-widget {
+    clear: both;
+    overflow: hidden;
+    padding: 0 !important;
+    margin: $spacing-small 0 !important;
+}
