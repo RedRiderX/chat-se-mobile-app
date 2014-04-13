@@ -59,6 +59,12 @@ var app = {
                             $.get('js/chat.window.js', function(jsData) {
 
                                 iab.executeScript( { code: jsData }, function() {
+                                   
+                                    if ( $('.options input[name="darkStyles"]').is(':checked') ) {
+                                        
+                                        iab.executeScript( { code: "$(body).attr('data-darkStyles', 'true')" } );
+                                    }
+
                                     console.log("CSS and JS loaded");
                                 });
                             });

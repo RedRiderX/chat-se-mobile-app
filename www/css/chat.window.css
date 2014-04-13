@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   font-size: 16px !important;
@@ -210,4 +211,143 @@ body {
 /* chat widgets */
 ul#my-rooms > li {
   font-size: 1em;
+}
+
+body[data-darkStyles="true"] {
+  background-image: none !important;
+  background-color: #383838 !important;
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] .messages,
+body[data-darkStyles="true"] .message .meta {
+  background-color: #505C63 !important;
+  color: #D3D3D3 !important;
+  border: 0 !important;
+}
+body[data-darkStyles="true"] .mine .messages {
+  background-color: #333333 !important;
+}
+body[data-darkStyles="true"] .message.pending,
+body[data-darkStyles="true"] .message.neworedit,
+body[data-darkStyles="true"] .message.posted {
+  color: #E0E4CC !important;
+}
+body[data-darkStyles="true"] .message.highlight {
+  color: #333 !important;
+  background-color: #e9903c !important;
+}
+body[data-darkStyles="true"] .message .timestamp {
+  background: none !important;
+  background-color: #333 !important;
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] div.message:hover .action-link {
+  background: #505C63 !important;
+}
+body[data-darkStyles="true"] .reply-parent,
+body[data-darkStyles="true"] .reply-child {
+  background-color: #3e3e3e !important;
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] #main #input-area {
+  background-image: none !important;
+  background-color: #222 !important;
+}
+body[data-darkStyles="true"] #main #input-area #input {
+  background-color: #222 !important;
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] #main #sidebar {
+  background-image: none !important;
+  background-color: transparent !important;
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] .onebox {
+  background-color: #76848B !important;
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] .onebox.ob-image,
+body[data-darkStyles="true"] .onebox.ob-youtube {
+  background-color: #505C63 !important;
+}
+body[data-darkStyles="true"] .mine .onebox.ob-image,
+body[data-darkStyles="true"] .mine .onebox.ob-youtube {
+  background-color: #333333 !important;
+}
+body[data-darkStyles="true"] .onebox img {
+  background-color: #FFF !important;
+}
+body[data-darkStyles="true"] .ob-post-tag,
+body[data-darkStyles="true"] .tag {
+  background-color: #666666 !important;
+  color: #D3D3D3 !important;
+  border-color: #333 !important;
+}
+body[data-darkStyles="true"] .ob-tweet .ob-status-text {
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] body a {
+  color: #A7DBD8 !important;
+}
+body[data-darkStyles="true"] body a.signature {
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] body #container .button {
+  background-image: none !important;
+  background: none !important;
+  text-shadow: none;
+  background-color: #383838 !important;
+  color: #D3D3D3 !important;
+  border-color: #333333 !important;
+}
+body[data-darkStyles="true"] .mention {
+  background-color: #e9903c !important;
+  color: #333;
+}
+body[data-darkStyles="true"] .msg-small,
+body[data-darkStyles="true"] .user-container .flair {
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] .user-container .signature .username.moderator {
+  color: #e9903c !important;
+}
+body[data-darkStyles="true"] .user-container .moderator:after {
+  content: " ♦";
+}
+body[data-darkStyles="true"] .deleted {
+  color: #383838 !important;
+}
+body[data-darkStyles="true"] #roomtitle {
+  text-shadow: none !important;
+}
+body[data-darkStyles="true"] body .monologue.mine .message:hover .action-link {
+  background-color: #e9903c;
+}
+body[data-darkStyles="true"] #present-users,
+body[data-darkStyles="true"] ul#my-rooms,
+body[data-darkStyles="true"] div#starred-posts > div > ul > li {
+  border-bottom: 1px dotted #666 !important;
+}
+body[data-darkStyles="true"] .reputation-score,
+body[data-darkStyles="true"] #silence-note .system-message,
+body[data-darkStyles="true"] div.system-message-container div.system-message {
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] ul#my-rooms > li.activity-0 {
+  color: #e9903c !important;
+}
+body[data-darkStyles="true"] ul#my-rooms > li.activity-1,
+body[data-darkStyles="true"] ul#my-rooms > li.activity-2,
+body[data-darkStyles="true"] ul#my-rooms > li.activity-3 {
+  color: #D3D3D3 !important;
+}
+body[data-darkStyles="true"] .vote-count-container.stars .img,
+body[data-darkStyles="true"] .vote-count-container.stars.user-star .img {
+  background-image: url("http://tommedley.com/files/sprites.png") !important;
+}
+body[data-darkStyles="true"] body #container a.button {
+  background-color: #444;
+}
+body[data-darkStyles="true"] .sprite {
+  background-image: url("http://tommedley.com/files/sprites.png") !important;
 }

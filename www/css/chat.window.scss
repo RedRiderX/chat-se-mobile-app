@@ -153,3 +153,11 @@ body {
 ul#my-rooms>li {
   font-size: 1em;
 }
+
+// If the page is really a chat room, add more styles that people want
+
+// body[data-isPageChatRoom="true"]
+body[data-darkStyles="true"] {
+
+    @import "scss/dark.scss";
+}

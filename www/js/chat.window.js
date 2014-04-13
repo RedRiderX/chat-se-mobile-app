@@ -4,6 +4,8 @@ $(function() {
 	var viewportTag = '<meta name="viewport" content="width=device-width, initial-scale=1">';
 	$('head').prepend(viewportTag);
 
+	isPageChatRoom();
+
 	// Move chatroom title
 	$( '#sidebar-content' ).prepend( $( '#room-title' ) );
 
@@ -34,3 +36,30 @@ $(function() {
 		}
 	});
 });
+
+var isPageChatRoom = function() {
+
+	var currentUrl = window.location.pathname;
+	var currentUrlIsLocal = false;
+	var localDomains = [
+		"http://chat.stackexchange.com/rooms/",
+		"https://chat.stackexchange.com/rooms/"
+	]
+
+
+	for (var i = 0; i < localDomains.length; i++) {
+
+		if (currentUrl.lastIndexOf(localDomains[i], 0) === 0) {
+
+			currentUrlIsLocal = true;
+		}		
+	}
+
+	if (currentUrlIsLocal) {
+
+		$('head').attr( 'data-isPageChatRoom', true);
+	} else {
+
+		$('head').attr( 'data-isPageChatRoom', false);
+	}
+}
