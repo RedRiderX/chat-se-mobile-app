@@ -45,6 +45,8 @@ var app = {
                     // workaround to get code using jQuery.get
                     $.get('css/chat.window.css', function(cssData) {
 
+                        alert(cssData);
+
                         // Once loaded, add css
                         iab.insertCSS( { file: cssData }, function() {
 
