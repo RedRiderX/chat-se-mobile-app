@@ -1,4 +1,4 @@
-$(document).onready(function() {
+$(function() {
 	
 	alert("js injected!");
 });
