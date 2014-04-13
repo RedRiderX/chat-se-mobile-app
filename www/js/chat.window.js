@@ -7,5 +7,30 @@ $(function() {
 	// Move chatroom title
 	$( '#sidebar-content' ).prepend( $( '#sidebar-content .room-title' ) );
 
-	console.log("js injected!");
+	console.log('js injected!');
+
+	// TODO: Remove this extremely hacky method
+	// add event listener to open external links in a real browser
+    $(document).on('click', 'a', function(event) {
+
+    	var shouldOpenExternal = false;
+    	var url = $(this).attr('href');
+    	var urlIsRelative = false;
+
+    	if ( $(this).is("[href^='/']") ) {
+    		
+			urlIsRelative = true;    		
+    	}
+
+    	if ( !urlIsRelative ) {
+
+			shouldOpenExternal = true;
+    	}
+
+		if ( shouldOpenExternal ) {
+
+			event.preventDefault();
+			window.open(url, '_system')
+		}
+	});
 });

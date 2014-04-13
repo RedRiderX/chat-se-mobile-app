@@ -100,6 +100,7 @@ body {
 }
 
 .message .meta {
+  -webkit-transform: scale(3) !important;
   transform: scale(3) !important;
   right: 3rem !important;
   bottom: 1rem !important;
