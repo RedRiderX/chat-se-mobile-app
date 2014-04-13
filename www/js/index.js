@@ -37,6 +37,16 @@ var app = {
 
                 var iab = window.open($(this).attr('href'), '_blank');
 
+                iab.addEventListener('loadstart', function() {
+
+                    $.get('js/chat.window.preload.js', function(jsData) {
+
+                        iab.executeScript( { code: jsData }, function() {
+                            console.log("js is preloaded");
+                        });
+                    });
+                });
+
                 iab.addEventListener('loadstop', function() {
 
                     // workaround to get code using jQuery.get
