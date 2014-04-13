@@ -42,8 +42,7 @@ var app = {
                 iab.addEventListener('loadstop', function() {
                     // Once loaded, add css
                     // iab.insertCSS( { file: "../css/chat.window.css" } );
-                    // iab.insertCSS( { file: "chat.window.css" } );
-                    jab.insertCSS( { file: "chat.window.css" } );
+                    iab.insertCSS( { file: "chat.window.css" } );
                 });
             } else {
                 alert('without styles');
