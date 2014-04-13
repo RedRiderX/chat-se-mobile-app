@@ -44,7 +44,7 @@ body {
 }
 
 /* Portrait layout (default) */
-.app {
+div[data-role="content"] {
   background: url(../img/logo.png) no-repeat center top;
   /* 170px x 200px */
   position: absolute;
@@ -61,11 +61,10 @@ body {
   margin: -115px 0px 0px -112px;
   /* offset vertical: half of image height and text area height */
   /* offset horizontal: half of text area width */
+  /* Landscape layout (with min-width) */
 }
-
-/* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1 / 1) and (min-width: 400px) {
-  .app {
+  div[data-role="content"] {
     background-position: left center;
     padding: 75px 0px 75px 170px;
     /* padding-top + padding-bottom + text area = image height */
@@ -73,12 +72,6 @@ body {
     /* offset vertical: half of image height */
     /* offset horizontal: half of image width and text area width */
   }
-}
-.chat-window {
-  display: block;
-  width: 400px;
-  height: 400px;
-  margin: auto;
 }
 
 h1 {
