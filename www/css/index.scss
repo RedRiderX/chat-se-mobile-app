@@ -97,6 +97,22 @@ h1 {
     display:none;
 }
 
+.options {
+    height: auto;
+    margin: 2rem 0 3rem;
+
+    input[type="checkbox"] {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    label {
+        font-size: 1.2rem;
+        left: 2.7rem;
+        position: relative;
+    }
+}
+
 @keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
