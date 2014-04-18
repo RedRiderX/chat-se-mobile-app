@@ -94,6 +94,12 @@ body {
     right: 0 !important;
   }
 }
+@media (orientation: portrait) and (max-width: 670px) {
+  #sidebar {
+    width: 16rem !important;
+    right: -16rem !important;
+  }
+}
 
 #room-title {
   text-align: right;

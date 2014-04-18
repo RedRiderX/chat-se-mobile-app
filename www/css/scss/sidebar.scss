@@ -100,7 +100,10 @@
         }
     }
 
-
+    @media (orientation: portrait) and (max-width: 670px) {
+        width: 16rem !important;
+        right: -16rem !important;
+    }
 }
 
 #room-title {
