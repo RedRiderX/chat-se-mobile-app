@@ -26,8 +26,6 @@
         width: 100%;
         padding: .5em 0;
         text-align: center;
-        
-        color: $clr-text-button;
         text-decoration: none;
     }
     
@@ -73,6 +71,22 @@
         height: auto;
     }
 
+    /* starred comment widget */
+    #starred-posts ul > li {
+        padding-left: 2.5rem !important;
+    }
+
+    .vote-count-container.stars {
+        position: absolute;
+        left: 1rem;
+
+        .img {
+            -webkit-transform: scale(2);
+            transform: scale(2);
+            display: block !important;
+            margin-bottom: $spacing-small !important;
+        }
+    }
 
     @media (orientation: portrait) {
  
@@ -85,6 +99,8 @@
             right: 0 !important;
         }
     }
+
+
 }
 
 #room-title {

@@ -26,6 +26,7 @@ body {
   transition: all 0.3s;
   /* room tags */
   /* users widget */
+  /* starred comment widget */
 }
 #sidebar a {
   text-decoration: underline;
@@ -35,7 +36,6 @@ body {
   width: 100%;
   padding: .5em 0;
   text-align: center;
-  color: #333333;
   text-decoration: none;
 }
 #sidebar .tag {
@@ -69,6 +69,19 @@ body {
 #sidebar .avatar img {
   width: 100% !important;
   height: auto;
+}
+#sidebar #starred-posts ul > li {
+  padding-left: 2.5rem !important;
+}
+#sidebar .vote-count-container.stars {
+  position: absolute;
+  left: 1rem;
+}
+#sidebar .vote-count-container.stars .img {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  display: block !important;
+  margin-bottom: 0.5rem !important;
 }
 @media (orientation: portrait) {
   #sidebar {
