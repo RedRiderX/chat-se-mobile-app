@@ -43,7 +43,8 @@ body {
 #room-ad,
 #present-users,
 #active-user,
-#footer-logo {
+#footer-logo,
+#footer-legal {
     display: none !important;
 }
 
@@ -76,12 +77,12 @@ body {
 
     @media (orientation: landscape) {
 
-        #input-area {
-            width: 30% !important;
-            right: 0 !important; 
-            left: auto !important;
-            height: 8em !important;
-        }
+        width: 28% !important;
+        right: 0 !important; 
+        left: auto !important;
+        height: 8em !important;
+        padding: 0 $spacing-medium !important;
+
     }
     
     @media (orientation: portrait) {
@@ -116,11 +117,17 @@ body {
     }
 }
 
-@media (orientation: landscape) {
+#chat {
 
-    #chat {
+    padding-bottom: 4rem !important;
+
+    @media (orientation: landscape) {
+        
         padding-bottom: 0 !important;
     }
+}
+
+@media (orientation: landscape) {
 
     #sayit-button {
         margin-left: 0 !important;
